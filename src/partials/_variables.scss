@@ -3,11 +3,50 @@ $quickSand: 'Quicksand', sans-serif;
 $paddingBtn: 18px 48px;;
 $radiuBtn:35px;
 $fontSizeBtn: 13px;
-$gradientGreen: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);;
+$gradientGreen: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
 
 @mixin flexBetween {
   display: flex;
   justify-content: space-between;
   height: 100%;
   align-items: center;
+}
+
+@mixin btnStyle {
+  font-size: $fontSizeBtn;
+  padding: $paddingBtn;
+  border-radius: $radiuBtn;
+  border: none;
+  background: $gradientGreen;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 6px 6px 25px 0 rgb(0 217 166 / 35%);
+  cursor: pointer;
+}
+
+@mixin textBtnStyle {
+  position: relative;
+  z-index: 500;
+}
+
+@mixin hoverBackgroundBtn {
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  transition-property: width;
+  transition-property: height;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin onHoverBtn {
+  width: 170px;
+  height: 170px;
+  z-index: 1;
 }

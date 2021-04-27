@@ -9,8 +9,10 @@
 
 function initVue() {
   new Vue({
-    el: 'header',
+    el: '.vue',
     data: {
+      showSearch: true,
+      // ARRAY
       iconArr: [{
         icon: "fab fa-facebook-f"
       }, {
@@ -33,8 +35,8 @@ function initVue() {
       }]
     },
     methods: {
-      ciao: function ciao() {
-        console.log(this.iconArr[1]);
+      searchBar: function searchBar() {
+        this.showSearch = !this.showSearch;
       }
     }
   });

@@ -1,7 +1,10 @@
 function initVue() {
   new Vue({
-    el: 'header',
+    el: '.vue',
     data: {
+
+      showSearch: true,
+      // ARRAY
       iconArr:
       [
         {
@@ -36,8 +39,8 @@ function initVue() {
       ]
     },
     methods: {
-      ciao: function() {
-        console.log(this.iconArr[1]);
+      searchBar: function () {
+      this.showSearch = !this.showSearch;
       }
     }
   });
