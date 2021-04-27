@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 // SEARCH SECTION
 .fade-enter-active, .fade-leave-active {
   transition: opacity .6s;
@@ -63,6 +67,7 @@ header {
   position: fixed;
   top:0;
   width: 100%;
+  box-shadow: 0 4px 44px 0 rgb(0 0 0 / 14%);
 }
 // Nav Top
 .nav-top {
@@ -95,7 +100,6 @@ header {
       font-weight: bold;
     }
     li {
-      list-style-type: none;
       font-size: 14px;
       margin:0 20px;
       a {
@@ -107,6 +111,7 @@ header {
       }
     }
   }
+
   button {
     @include btnStyle;
     margin: 0 20px;
@@ -135,14 +140,72 @@ main {
 // JUMBOTRON SECTION
 
 .jumbotron {
-  #yearsExp {
-    letter-spacing: 8px;
-    background: linear-gradient(180deg, #00d9a6 0%, #9be15d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  h1 {
-    font-size: 80px;
-    font-weight: 900;
+  background-image: url("images/Group-40-2x.png");
+  height: 950px;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: calc(100% + 300px) center;
+  .text-jumbo {
+    padding-top: 170px;
+    width: 40%;
+    #yearsExp {
+      letter-spacing: 8px;
+      background: linear-gradient(180deg, #00d9a6 0%, #9be15d 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 80px;
+      font-weight: 700;
+      margin: 20px 0;
+      span {
+        color: #00d9a6;
+      }
+    }
+    .line-gradient1 {
+      background: $gradientGreen;
+      width: 10px;
+      height: 5px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+    .line-gradient2 {
+      background: $gradientGreen;
+      width: 50px;
+      height: 5px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+    p {
+      font-family: $ubuntu;
+      font-weight: 300;
+      margin: 50px 0;
+      line-height: 1.8;
+    }
+    button {
+      padding: $paddingBtn;
+      border-radius: $radiuBtn;
+      font-size: $fontSizeBtn;
+      border:none;
+      color: white;
+      background: linear-gradient(269deg, #000000E6 0%, #3d3d3d 100%);
+      cursor: pointer;
+      margin: 50px 0;
+    }
+    ul {
+      margin: 50px 0;
+      display: flex;
+      li {
+        margin: 0 10px;
+        font-weight: bold;
+        a {
+          color: black;
+          &:hover {
+            color: #00d9a6;
+          }
+        }
+      }
+    }
   }
 }

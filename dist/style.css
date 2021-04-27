@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.6s;
 }
@@ -63,6 +67,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  box-shadow: 0 4px 44px 0 rgba(0, 0, 0, 0.14);
 }
 
 .nav-top {
@@ -97,7 +102,6 @@ header {
   font-weight: bold;
 }
 .nav-bot ul li {
-  list-style-type: none;
   font-size: 14px;
   margin: 0 20px;
 }
@@ -155,15 +159,75 @@ main {
   margin-top: 145px;
 }
 
-.jumbotron #yearsExp {
+.jumbotron {
+  background-image: url("images/Group-40-2x.png");
+  height: 950px;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: calc(100% + 300px) center;
+}
+.jumbotron .text-jumbo {
+  padding-top: 170px;
+  width: 40%;
+}
+.jumbotron .text-jumbo #yearsExp {
   letter-spacing: 8px;
   background: linear-gradient(180deg, #00d9a6 0%, #9be15d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
-.jumbotron h1 {
+.jumbotron .text-jumbo h1 {
   font-size: 80px;
-  font-weight: 900;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.jumbotron .text-jumbo h1 span {
+  color: #00d9a6;
+}
+.jumbotron .text-jumbo .line-gradient1 {
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  width: 10px;
+  height: 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.jumbotron .text-jumbo .line-gradient2 {
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  width: 50px;
+  height: 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.jumbotron .text-jumbo p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  margin: 50px 0;
+  line-height: 1.8;
+}
+.jumbotron .text-jumbo button {
+  padding: 18px 48px;
+  border-radius: 35px;
+  font-size: 13px;
+  border: none;
+  color: white;
+  background: linear-gradient(269deg, #000000E6 0%, #3d3d3d 100%);
+  cursor: pointer;
+  margin: 50px 0;
+}
+.jumbotron .text-jumbo ul {
+  margin: 50px 0;
+  display: flex;
+}
+.jumbotron .text-jumbo ul li {
+  margin: 0 10px;
+  font-weight: bold;
+}
+.jumbotron .text-jumbo ul li a {
+  color: black;
+}
+.jumbotron .text-jumbo ul li a:hover {
+  color: #00d9a6;
 }
 
 * {
