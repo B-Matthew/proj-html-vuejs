@@ -274,6 +274,7 @@ main {
 .designWebsite .flexNormal {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .designWebsite .flexNormal .text-design {
   margin: 30px 0;
@@ -354,6 +355,13 @@ main {
 .designWebsite .flexNormal .boxes .box p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
+}
+.designWebsite .flexNormal .phrasesAbsolute {
+  position: absolute;
+  right: -250px;
+  top: 50%;
+  font-size: 10px;
+  transform: rotate(270deg);
 }
 
 .learnMore {
@@ -446,6 +454,87 @@ main {
   transition-timing-function: ease-in-out;
 }
 .learnMore .flexNormal .learnMoreTxt button:hover .hoverEff {
+  width: 170px;
+  height: 170px;
+  z-index: 1;
+}
+
+.samples {
+  padding: 210px 0 150px;
+}
+.samples .flexNormal {
+  display: flex;
+  padding-bottom: 100px;
+}
+.samples .flexNormal .item1 {
+  flex-basis: 48%;
+}
+.samples .flexNormal .item1 h2 {
+  font-size: 55px;
+  margin: 35px 0;
+}
+.samples .flexNormal .item2 {
+  flex-basis: 52%;
+  display: flex;
+  align-items: flex-end;
+}
+.samples .flexNormal .item2 p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+}
+.samples .rowImgs {
+  display: flex;
+  margin-bottom: 4px;
+}
+.samples .rowImgs .images {
+  flex-basis: 24.7%;
+  margin-right: auto;
+}
+.samples .rowImgs .images img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.samples .rowImgs .images img:hover {
+  transform: scale(1.1);
+}
+.samples .buttonDiv {
+  text-align: center;
+}
+.samples .buttonDiv button {
+  font-size: 13px;
+  padding: 18px 48px;
+  border-radius: 35px;
+  border: none;
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 6px 6px 25px 0 rgba(0, 217, 166, 0.35);
+  cursor: pointer;
+  margin: 100px 0;
+}
+.samples .buttonDiv button .textBtn {
+  position: relative;
+  z-index: 500;
+}
+.samples .buttonDiv button .hoverEff {
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition-property: width;
+  transition-property: height;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.samples .buttonDiv button:hover .hoverEff {
   width: 170px;
   height: 170px;
   z-index: 1;
