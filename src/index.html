@@ -13,7 +13,6 @@
   </head>
   <body>
     <div class="vue">
-
       <!-- HEADER -->
       <transition name="fade">
         <div class="search" v-show ="!showSearch">
@@ -57,13 +56,14 @@
         </nav>
       </header>
 
+
       <!-- MAIN -->
       <main>
-        <section class="jumbotron">
+        <section v-show="ind == 0" class="jumbotron bg-img1">
           <div class="container">
             <div class="text-jumbo">
               <div id="yearsExp">17 YEARS OF EXPERIENCE</div>
-              <h1>A Group of Expert <span>Planners</span></h1>
+              <h1>We Are A Web Design <span class="greenTxt">Agency</span></h1>
               <span class="line-gradient1"></span>
               <span class="line-gradient2"></span>
               <p>
@@ -79,6 +79,101 @@
                 <li>-</li>
                 <li><a href="#">TWITTER</a></li>
               </ul>
+            </div>
+          </div>
+          <div class="ind-jumbo">
+            <span :class="(elem - 1 == ind ) ? 'backSpan' : ''" v-for="elem in 3">0{{elem}}</span>
+          </div>
+        </section>
+
+        <section v-show="ind == 1" class="jumbotron bg-img2">
+          <div class="container">
+            <div class="text-jumbo">
+              <div id="yearsExp">17 YEARS OF EXPERIENCE</div>
+              <h1>Focus On Your <span class="greenTxt">Business</span></h1>
+              <span class="line-gradient1"></span>
+              <span class="line-gradient2"></span>
+              <p>
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.
+              </p>
+              <button type="button" name="button">READ MORE</button>
+              <ul>
+                <li><a href="#">FACEBOOK</a></li>
+                <li>-</li>
+                <li><a href="#">INSTAGRAM</a></li>
+                <li>-</li>
+                <li><a href="#">YOUTUBE</a></li>
+                <li>-</li>
+                <li><a href="#">TWITTER</a></li>
+              </ul>
+            </div>
+            <div class="ind-jumbo">
+              <span :class="(elem - 1 == ind ) ? 'backSpan' : ''" v-for="elem in 3">0{{elem}}</span>
+            </div>
+          </div>
+        </section>
+        <section v-show="ind == 2" class="jumbotron bg-img3">
+          <div class="container">
+            <div class="text-jumbo">
+              <div id="yearsExp">17 YEARS OF EXPERIENCE</div>
+              <h1>A Group of Expert <span class="greenTxt">Planners</span></h1>
+              <span class="line-gradient1"></span>
+              <span class="line-gradient2"></span>
+              <p>
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.
+              </p>
+              <button type="button" name="button">READ MORE</button>
+              <ul>
+                <li><a href="#">FACEBOOK</a></li>
+                <li>-</li>
+                <li><a href="#">INSTAGRAM</a></li>
+                <li>-</li>
+                <li><a href="#">YOUTUBE</a></li>
+                <li>-</li>
+                <li><a href="#">TWITTER</a></li>
+              </ul>
+            </div>
+            <div class="ind-jumbo">
+              <span :class="(elem - 1 == ind ) ? 'backSpan' : ''" v-for="elem in 3">0{{elem}}</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION WEBSITE DESIGN -->
+        <section class="designWebsite">
+          <div class="container flexNormal">
+            <div class="text-design">
+              <h2>We Are Here To Make Your <span class="greenTxt">Website</span> Look More <span class="greenTxt">Elegant</span> And Stylish!</h2>
+              <span class="line-gradient1"></span>
+              <span class="line-gradient2"></span>
+              <button type="button" name="button"><span class="textBtn">VIEW ALL</span><span class="hoverEff"></span></button>
+            </div>
+            <div class="boxes">
+              <div v-for="elem in sectionWebsiteArr" class="box">
+                <i :class="elem.imgs"></i>
+                <h3>{{elem.title}}</h3>
+                <p>{{elem.txt}}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="learnMore">
+          <div class="container flexNormal">
+            <div class="images-woman">
+              <div class="imgs-man">
+                <img id="man" src="images/busy-architect-PYVKWM4-1024x872.jpg" alt="">
+                <div class="overlay">
+                </div>
+              </div>
+              <img id="woman" src="images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+            </div>
+            <div class="learnMoreTxt">
+              <h3>learn more <br>about our <br><span class="greenTxt">missions</span></h3>
+              <span class="line-gradient1"></span>
+              <span class="line-gradient2"></span>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.</p>
+              <button type="button" name="button"><span class="textBtn">READ MORE</span><span class="hoverEff"></span></button>
             </div>
           </div>
         </section>

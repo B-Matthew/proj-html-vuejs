@@ -18,6 +18,26 @@ li {
   list-style: none;
 }
 
+.greenTxt {
+  color: #00d9a6;
+}
+
+.line-gradient1 {
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  width: 10px;
+  height: 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.line-gradient2 {
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  width: 50px;
+  height: 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.6s;
 }
@@ -68,6 +88,7 @@ header {
   top: 0;
   width: 100%;
   box-shadow: 0 4px 44px 0 rgba(0, 0, 0, 0.14);
+  z-index: 998;
 }
 
 .nav-top {
@@ -159,8 +180,25 @@ main {
   margin-top: 145px;
 }
 
-.jumbotron {
+.bg-img1 {
+  background-image: url("images/Group-36-2x.png");
+}
+
+.bg-img2 {
+  background-image: url("images/Group-35-2x.png");
+}
+
+.bg-img3 {
   background-image: url("images/Group-40-2x.png");
+}
+
+.backSpan {
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+}
+
+.jumbotron {
+  position: relative;
+  z-index: 1;
   height: 950px;
   background-size: 80%;
   background-repeat: no-repeat;
@@ -181,23 +219,6 @@ main {
   font-size: 80px;
   font-weight: 700;
   margin: 20px 0;
-}
-.jumbotron .text-jumbo h1 span {
-  color: #00d9a6;
-}
-.jumbotron .text-jumbo .line-gradient1 {
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-  width: 10px;
-  height: 5px;
-  border-radius: 3px;
-  display: inline-block;
-}
-.jumbotron .text-jumbo .line-gradient2 {
-  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-  width: 50px;
-  height: 5px;
-  border-radius: 3px;
-  display: inline-block;
 }
 .jumbotron .text-jumbo p {
   font-family: "Ubuntu", sans-serif;
@@ -228,6 +249,206 @@ main {
 }
 .jumbotron .text-jumbo ul li a:hover {
   color: #00d9a6;
+}
+.jumbotron .ind-jumbo {
+  position: absolute;
+  bottom: 90px;
+  left: 40%;
+  padding: 14px 1px;
+  background: linear-gradient(269deg, #000000E6 0%, #3d3d3d 100%);
+  border-radius: 35px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #aaaaaa;
+}
+.jumbotron .ind-jumbo span {
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 32px;
+}
+
+.designWebsite {
+  padding: 210px 0 200px;
+}
+.designWebsite .flexNormal {
+  display: flex;
+  justify-content: space-between;
+}
+.designWebsite .flexNormal .text-design {
+  margin: 30px 0;
+  flex-basis: 35%;
+}
+.designWebsite .flexNormal .text-design h2 {
+  font-size: 55px;
+  line-height: 1.5;
+  margin: 30px 0;
+}
+.designWebsite .flexNormal .text-design button {
+  display: block;
+  font-size: 13px;
+  padding: 18px 48px;
+  border-radius: 35px;
+  border: none;
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 6px 6px 25px 0 rgba(0, 217, 166, 0.35);
+  cursor: pointer;
+  margin: 50px 0;
+}
+.designWebsite .flexNormal .text-design button .textBtn {
+  position: relative;
+  z-index: 500;
+}
+.designWebsite .flexNormal .text-design button .hoverEff {
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition-property: width;
+  transition-property: height;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.designWebsite .flexNormal .text-design button:hover .hoverEff {
+  width: 170px;
+  height: 170px;
+  z-index: 1;
+}
+.designWebsite .flexNormal .boxes {
+  flex-basis: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.designWebsite .flexNormal .boxes .box {
+  flex-basis: 47%;
+  box-shadow: 0 3px 35px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 15px;
+  padding: 50px 50px 62px 47px;
+  margin: 25px 0;
+}
+.designWebsite .flexNormal .boxes .box:hover {
+  background: linear-gradient(75deg, #00d9a6 0%, #9be15d 100%);
+  color: white;
+  box-shadow: 6px 6px 25px 0 rgba(0, 217, 166, 0.35);
+}
+.designWebsite .flexNormal .boxes .box:hover i {
+  color: white;
+}
+.designWebsite .flexNormal .boxes .box h3 {
+  font-size: 29px;
+  font-weight: 400;
+  margin: 35px 0;
+}
+.designWebsite .flexNormal .boxes .box i {
+  color: #00d9a6;
+  font-size: 60px;
+}
+.designWebsite .flexNormal .boxes .box p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+}
+
+.learnMore {
+  padding: 300px 0 200px;
+  background-color: #f9f9f9;
+}
+.learnMore .flexNormal {
+  display: flex;
+  justify-content: space-between;
+}
+.learnMore .flexNormal .images-woman {
+  flex-basis: 60%;
+  position: relative;
+  text-align: center;
+}
+.learnMore .flexNormal .images-woman .imgs-man {
+  width: 850px;
+  height: 680px;
+  z-index: 50;
+  top: -100px;
+  left: -200px;
+  position: absolute;
+}
+.learnMore .flexNormal .images-woman .imgs-man #man {
+  width: 850px;
+  height: 680px;
+  border-radius: 40px;
+}
+.learnMore .flexNormal .images-woman .imgs-man .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, #00d9a6 0%, #9be15d 100%);
+  border-radius: 40px;
+  opacity: 0.8;
+}
+.learnMore .flexNormal .images-woman #woman {
+  width: 788px;
+  height: 631px;
+  border-radius: 15px;
+  box-shadow: 0 4px 44px 0 rgba(0, 0, 0, 0.14);
+  position: relative;
+  z-index: 100;
+}
+.learnMore .flexNormal .learnMoreTxt {
+  flex-basis: 35%;
+}
+.learnMore .flexNormal .learnMoreTxt h3 {
+  font-size: 55px;
+  margin: 30px 0;
+}
+.learnMore .flexNormal .learnMoreTxt p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  margin: 30px 0;
+  line-height: 1.8;
+}
+.learnMore .flexNormal .learnMoreTxt button {
+  display: block;
+  font-size: 13px;
+  padding: 18px 48px;
+  border-radius: 35px;
+  border: none;
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 6px 6px 25px 0 rgba(0, 217, 166, 0.35);
+  cursor: pointer;
+  margin: 50px 0;
+}
+.learnMore .flexNormal .learnMoreTxt button .textBtn {
+  position: relative;
+  z-index: 500;
+}
+.learnMore .flexNormal .learnMoreTxt button .hoverEff {
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition-property: width;
+  transition-property: height;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.learnMore .flexNormal .learnMoreTxt button:hover .hoverEff {
+  width: 170px;
+  height: 170px;
+  z-index: 1;
 }
 
 * {

@@ -17,6 +17,24 @@ li {
   list-style: none;
 }
 
+.greenTxt {
+  color: #00d9a6;
+}
+
+.line-gradient1 {
+  background: $gradientGreen;
+  width: 10px;
+  height: 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.line-gradient2 {
+  background: $gradientGreen;
+  width: 50px;
+  height: 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
 // SEARCH SECTION
 .fade-enter-active, .fade-leave-active {
   transition: opacity .6s;
@@ -68,6 +86,7 @@ header {
   top:0;
   width: 100%;
   box-shadow: 0 4px 44px 0 rgb(0 0 0 / 14%);
+  z-index: 998;
 }
 // Nav Top
 .nav-top {
@@ -138,9 +157,25 @@ main {
   margin-top: 145px;
 }
 // JUMBOTRON SECTION
+.bg-img1 {
+  background-image: url("images/Group-36-2x.png");
+}
+
+.bg-img2 {
+  background-image: url("images/Group-35-2x.png");
+}
+
+.bg-img3 {
+  background-image: url("images/Group-40-2x.png");
+}
+
+.backSpan {
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+}
 
 .jumbotron {
-  background-image: url("images/Group-40-2x.png");
+  position: relative;
+  z-index: 1;
   height: 950px;
   background-size: 80%;
   background-repeat: no-repeat;
@@ -159,23 +194,6 @@ main {
       font-size: 80px;
       font-weight: 700;
       margin: 20px 0;
-      span {
-        color: #00d9a6;
-      }
-    }
-    .line-gradient1 {
-      background: $gradientGreen;
-      width: 10px;
-      height: 5px;
-      border-radius: 3px;
-      display: inline-block;
-    }
-    .line-gradient2 {
-      background: $gradientGreen;
-      width: 50px;
-      height: 5px;
-      border-radius: 3px;
-      display: inline-block;
     }
     p {
       font-family: $ubuntu;
@@ -204,6 +222,164 @@ main {
           &:hover {
             color: #00d9a6;
           }
+        }
+      }
+    }
+  }
+  .ind-jumbo {
+    position: absolute;
+    bottom: 90px;
+    left: 40%;
+    padding: 14px 1px;
+    background: linear-gradient(269deg, #000000E6 0%, #3d3d3d 100%);
+    border-radius: $radiuBtn;
+    font-weight: bold;
+    font-size: 20px;
+    color: #aaaaaa;
+    span {
+      margin: 0 5px;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 32px;
+    }
+  }
+}
+
+// SECTION WEBSITE DESIGN
+
+.designWebsite {
+  padding: 210px 0 200px;
+  .flexNormal {
+    display: flex;
+    justify-content: space-between;
+    .text-design {
+      margin: 30px 0;
+      flex-basis: 35%;
+      h2 {
+        font-size: 55px;
+        line-height: 1.5;
+        margin: 30px 0;
+      }
+      button {
+        display: block;
+        @include btnStyle;
+        margin: 50px 0;
+        .textBtn {
+          @include textBtnStyle;
+        }
+        .hoverEff {
+          @include hoverBackgroundBtn;
+        }
+        &:hover .hoverEff {
+          @include onHoverBtn;
+        }
+      }
+    }
+    .boxes {
+      flex-basis: 60%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .box {
+        flex-basis: 47%;
+        box-shadow: 0 3px 35px 0 rgb(0 0 0 / 14%);
+        border-radius: 15px;
+        padding: 50px 50px 62px 47px;
+        margin: 25px 0;
+        &:hover {
+          background: linear-gradient(75deg, #00d9a6 0%, #9be15d 100%);
+          color: white;
+          box-shadow: 6px 6px 25px 0 rgb(0 217 166 / 35%);
+        }
+        &:hover i {
+          color: white;
+        }
+        h3 {
+          font-size: 29px;
+          font-weight: 400;
+          margin: 35px 0;
+        }
+        i {
+          color: #00d9a6;
+          font-size: 60px;
+        }
+        p {
+          font-family: $ubuntu;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+// SECTION LEARNMORE
+
+.learnMore {
+  padding: 300px 0 200px;
+  background-color: #f9f9f9;
+  .flexNormal {
+    display: flex;
+    justify-content: space-between;
+    .images-woman {
+      flex-basis: 60%;
+      position: relative;
+      text-align: center;
+      .imgs-man {
+        width: 850px;
+        height: 680px;
+        z-index: 50;
+        top: -100px;
+        left: -200px;
+        position: absolute;
+        #man {
+          width: 850px;
+          height: 680px;
+          border-radius: 40px;
+        }
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(180deg, #00d9a6 0%, #9be15d 100%);;
+          border-radius: 40px;
+          opacity: 0.8;
+        }
+      }
+      #woman {
+        width: 788px;
+        height: 631px;
+        border-radius: 15px;
+        box-shadow: 0 4px 44px 0 rgb(0 0 0 / 14%);
+        position: relative;
+        z-index: 100;
+      }
+    }
+    .learnMoreTxt {
+      flex-basis: 35%;
+      h3 {
+        font-size: 55px;
+        margin: 30px 0;
+      }
+      p {
+        font-family: $ubuntu;
+        font-weight: 300;
+        margin: 30px 0;
+        line-height: 1.8;
+      }
+      button {
+        display: block;
+        @include btnStyle;
+        margin: 50px 0;
+        .textBtn {
+          @include textBtnStyle;
+        }
+        .hoverEff {
+          @include hoverBackgroundBtn;
+        }
+        &:hover .hoverEff {
+          @include onHoverBtn;
         }
       }
     }
