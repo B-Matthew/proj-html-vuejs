@@ -1,0 +1,98 @@
+.container {
+  width: 84%;
+  margin: auto;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-top {
+  background-color: #3d3d3d;
+  font-family: "Ubuntu", sans-serif;
+  height: 40px;
+  color: white;
+}
+.nav-top .nums {
+  font-size: 14px;
+  margin: 0 7px;
+}
+.nav-top i {
+  font-size: 16px;
+}
+.nav-top .social {
+  margin: 0 12px;
+}
+
+.nav-bot {
+  background-color: grey;
+  height: 105px;
+}
+.nav-bot img {
+  width: 195px;
+}
+.nav-bot ul {
+  display: flex;
+}
+.nav-bot ul li:first-child {
+  font-weight: bold;
+}
+.nav-bot ul li {
+  list-style-type: none;
+  font-size: 14px;
+  margin: 0 20px;
+}
+.nav-bot ul li a {
+  color: #3d3d3d;
+}
+.nav-bot button {
+  font-size: 13px;
+  padding: 18px 48px;
+  border-radius: 35px;
+  border: none;
+  background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 6px 6px 25px 0 rgba(0, 217, 166, 0.35);
+}
+.nav-bot button #ciao {
+  position: relative;
+  z-index: 500;
+}
+.nav-bot button #hoverEff {
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition-property: width;
+  transition-property: height;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.nav-bot button:hover #hoverEff {
+  width: 170px;
+  height: 170px;
+  z-index: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}

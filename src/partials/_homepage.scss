@@ -1,0 +1,90 @@
+// REGOLE GENERALI
+
+.container {
+  width: 84%;
+  margin: auto;
+}
+
+.flexBetween {
+  @include flexBetween;
+}
+
+a {
+  text-decoration: none;
+}
+// HEADER
+
+// Nav Top
+.nav-top {
+  background-color: #3d3d3d;
+  font-family: $ubuntu;
+  height: 40px;
+  color: white;
+  .nums {
+    font-size: 14px;
+    margin: 0 7px;
+  }
+  i {
+    font-size: 16px;
+  }
+  .social {
+    margin: 0 12px;
+  }
+}
+
+// Nav-bot
+.nav-bot {
+  background-color: grey;
+  height: 105px;
+  img {
+    width: 195px;
+  }
+  ul {
+    display: flex;
+    li:first-child {
+      font-weight: bold;
+    }
+    li {
+      list-style-type: none;
+      font-size: 14px;
+      margin:0 20px;
+      a {
+        color: #3d3d3d;
+      }
+    }
+  }
+  button {
+    font-size: $fontSizeBtn;
+    padding: $paddingBtn;
+    border-radius: $radiuBtn;
+    border: none;
+    background: $gradientGreen;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 6px 6px 25px 0 rgb(0 217 166 / 35%);
+    #ciao {
+      position: relative;
+      z-index: 500;
+    }
+    #hoverEff {
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50% , -50%);
+      transition-property: width;
+      transition-property: height;
+      transition: 0.3s;
+      transition-timing-function: ease-in-out;
+    }
+    &:hover #hoverEff {
+      width: 170px;
+      height: 170px;
+      z-index: 1;
+    }
+  }
+}

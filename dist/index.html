@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Proj-html-vuejs</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <style>@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap');</style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="nav-top">
+        <div class="container flexBetween">
+          <div>
+            <i @click="ciao()" class="fas fa-phone-alt"></i>
+            <span class="nums">(001) 88451234</span>
+            <span class="nums">88455438</span>
+          </div>
+          <div>
+            <i class="social" v-for="(elem,index) in iconArr" :class="elem.icon"></i>
+          </div>
+        </div>
+      </nav>
+      <nav class="nav-bot">
+        <div class="container flexBetween">
+          <div>
+            <img src="images/cropped-Group-39-2x.png" alt="">
+          </div>
+          <div>
+            <ul>
+              <li v-for="elem in navArr"><a href="#">{{elem.links}}</a></li>
+            </ul>
+          </div>
+          <div>
+            <button type="button" name="button"><span id="ciao">PURCHASE</span><span id="hoverEff"></span></button>
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+    <!-- MAIN -->
+    <main>
+
+    </main>
+    <!-- FOOTER -->
+    <footer>
+    </footer>
+  </body>
+  </html>
