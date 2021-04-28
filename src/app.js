@@ -4,6 +4,10 @@ function initVue() {
     data: {
       ind: 0,
       showSearch: true,
+      projects: 0,
+      comments: 0,
+      clients: 0,
+
       // ARRAY
       sectionWebsiteArr: [
         {
@@ -60,6 +64,7 @@ function initVue() {
       ]
     },
     methods: {
+      // MOSTRO la SEARCH SECTION 
       searchBar: function () {
         this.showSearch = !this.showSearch;
       },
@@ -69,10 +74,26 @@ function initVue() {
           this.ind = 0;
         }
       },
-
+      // INCREMENTO NUMERI NELLA SEZION3 CLIENTS
+      setTime: function () {
+        if (this.projects < 280) {
+        this.projects++
+        }
+        if (this.comments < 3500) {
+          this.comments++
+        }
+        if (this.clients < 100) {
+          this.clients++
+        }
+      },
     },
-    mounted: function() {
+    // SWITCH JUMBOTRON OGNI 5 SEC
+    mounted:  function() {
       setInterval(this.nextJumbo,5000);
+    },
+    // INCREMENTO NUMERI NELLA SEZION3 CLIENTS
+    mounted: function() {
+      setInterval(this.setTime,0)
     }
   });
 }

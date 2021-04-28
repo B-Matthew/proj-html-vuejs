@@ -7,12 +7,17 @@
   \********************/
 /***/ (() => {
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function initVue() {
-  new Vue({
+  new Vue(_defineProperty({
     el: '.vue',
     data: {
       ind: 0,
       showSearch: true,
+      projects: 0,
+      comments: 0,
+      clients: 0,
       // ARRAY
       sectionWebsiteArr: [{
         imgs: 'fas fa-tachometer-alt',
@@ -53,6 +58,7 @@ function initVue() {
       }]
     },
     methods: {
+      // MOSTRO la SEARCH SECTION 
       searchBar: function searchBar() {
         this.showSearch = !this.showSearch;
       },
@@ -62,12 +68,29 @@ function initVue() {
         if (this.ind >= 3) {
           this.ind = 0;
         }
+      },
+      // INCREMENTO NUMERI NELLA SEZION3 CLIENTS
+      setTime: function setTime() {
+        if (this.projects < 280) {
+          this.projects++;
+        }
+
+        if (this.comments < 3500) {
+          this.comments++;
+        }
+
+        if (this.clients < 100) {
+          this.clients++;
+        }
       }
     },
+    // SWITCH JUMBOTRON OGNI 5 SEC
     mounted: function mounted() {
       setInterval(this.nextJumbo, 5000);
     }
-  });
+  }, "mounted", function mounted() {
+    setInterval(this.setTime, 0);
+  }));
 }
 
 function init() {
