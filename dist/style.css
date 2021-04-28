@@ -804,6 +804,14 @@ main {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
+  position: relative;
+}
+.news .boxesNews .phrasesAbsolute {
+  position: absolute;
+  left: -250px;
+  top: 220px;
+  font-size: 10px;
+  transform: rotate(270deg);
 }
 .news .boxesNews .boxNews {
   box-shadow: 0 4px 44px 0 rgba(0, 0, 0, 0.14);
@@ -895,13 +903,14 @@ main {
 }
 
 .startWork {
+  background-color: #f9f9f9;
   padding: 80px 0 100px;
 }
 .startWork .flexNormal {
   display: flex;
 }
 .startWork .flexNormal .boxes {
-  background-color: red;
+  box-shadow: 0 4px 44px 0 rgba(0, 0, 0, 0.14);
   text-align: center;
   flex-basis: 48%;
   margin: auto;
@@ -979,6 +988,123 @@ main {
   z-index: 1;
 }
 
+.partners {
+  background-color: #f9f9f9;
+  padding: 50px 0 200px 0;
+}
+.partners .flexNormal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-top {
+  padding: 100px 0 100px;
+}
+.footer-top .flexNormal {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-top .flexNormal .boxes {
+  flex-basis: 23%;
+}
+.footer-top .flexNormal .boxes p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+.footer-top .flexNormal .boxes h2 {
+  margin-bottom: 20px;
+}
+.footer-top .flexNormal .boxes ul {
+  margin-top: 30px;
+}
+.footer-top .flexNormal .boxes ul .links {
+  line-height: 1.6;
+}
+.footer-top .flexNormal .boxes ul .links a {
+  color: black;
+}
+.footer-top .flexNormal .boxes ul .links a:hover {
+  color: #00d9a6;
+}
+.footer-top .flexNormal .boxes ul .contacts {
+  margin-bottom: 30px;
+}
+.footer-top .flexNormal .boxes .zoom {
+  margin: 30px 0;
+  overflow: hidden;
+}
+.footer-top .flexNormal .boxes .zoom .zoomy {
+  transform: scale(2);
+}
+.footer-top .flexNormal .boxes .zoom #map {
+  transition: 1s;
+}
+
+.footer-bot {
+  height: 110px;
+  width: 100%;
+}
+.footer-bot .flexBetween {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+.footer-bot .flexBetween p {
+  color: #aaaaaa;
+  font-size: 13px;
+  font-family: "Ubuntu", sans-serif;
+}
+.footer-bot .flexBetween ul {
+  display: flex;
+}
+.footer-bot .flexBetween ul li {
+  color: #aaaaaa;
+  margin: 0 15px;
+}
+
+#scroll {
+  font-size: 18px;
+  border: 2px solid black;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px 20px;
+  border-radius: 50%;
+  padding: 7px 14px;
+  cursor: pointer;
+  z-index: 999;
+  transition: 0.4s;
+  overflow: hidden;
+}
+#scroll:hover {
+  background-color: #aaaaaa;
+}
+#scroll:hover p {
+  -webkit-animation: downUp 0.4s linear;
+          animation: downUp 0.4s linear;
+}
+
+@-webkit-keyframes downUp {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes downUp {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;

@@ -7,7 +7,8 @@ function initVue() {
       projects: 0,
       comments: 0,
       clients: 0,
-
+      zommed: false,
+      test: 0,
       // ARRAY
       sectionWebsiteArr: [
         {
@@ -61,12 +62,59 @@ function initVue() {
         {
           links:"CONTACT"
         },
+      ],
+      linksArr: [
+        {
+          link: "Careers"
+        },
+        {
+          link: "News"
+        },
+        {
+          link: "Term of use"
+        },
+        {
+          link: "Privacy Projects"
+        },
+        {
+          link: "About"
+        },
+        {
+          link: "Contact"
+        },
+      ],
+      contactArr: [
+        {
+          info: "Patricia C. Amedee 4401 Waldeck Street Grapevine Nashville, TX 76051"
+        },
+        {
+          info: "info@yourdomain.com"
+        },
+        {
+          info: "+99 (0) 101 0000 888"
+        },
       ]
     },
+      // SWITCH JUMBOTRON OGNI 5 SEC
+    created: function() {
+      setInterval(this.nextJumbo,5000);
+    },
     methods: {
-      // MOSTRO la SEARCH SECTION 
+      clickJumbo: function(elem) {
+        const active = elem - 1;
+        console.log(active);
+        return this.ind = active;
+      },
+      // MOSTRO la SEARCH SECTION
       searchBar: function () {
         this.showSearch = !this.showSearch;
+      },
+      // ZOOM SULLA MAPPA
+      mapZoom: function() {
+        this.zommed = !this.zommed;
+      },
+      scrollUpPage: function() {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       },
       nextJumbo: function () {
         this.ind++
@@ -77,23 +125,20 @@ function initVue() {
       // INCREMENTO NUMERI NELLA SEZION3 CLIENTS
       setTime: function () {
         if (this.projects < 280) {
-        this.projects++
+          this.projects = this.projects + 2;
         }
         if (this.comments < 3500) {
-          this.comments++
+          this.comments = this.comments + 25;
         }
         if (this.clients < 100) {
-          this.clients++
+          this.clients++;
         }
       },
     },
-    // SWITCH JUMBOTRON OGNI 5 SEC
-    mounted:  function() {
-      setInterval(this.nextJumbo,5000);
-    },
+
     // INCREMENTO NUMERI NELLA SEZION3 CLIENTS
     mounted: function() {
-      setInterval(this.setTime,0)
+      setInterval(this.setTime,0);
     }
   });
 }

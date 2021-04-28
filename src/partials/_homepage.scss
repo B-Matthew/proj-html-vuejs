@@ -287,6 +287,7 @@ main {
         border-radius: 15px;
         padding: 50px 50px 62px 47px;
         margin: 25px 0;
+
         &:hover {
           background: linear-gradient(75deg, #00d9a6 0%, #9be15d 100%);
           color: white;
@@ -728,6 +729,14 @@ main {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    position: relative;
+    .phrasesAbsolute {
+      position: absolute;
+      left:-250px;
+      top: 220px;
+      font-size: 10px;
+      transform: rotate(270deg);
+    }
     .boxNews {
       box-shadow: 0 4px 44px 0 rgb(0 0 0 / 14%);
       flex-basis: 32%;
@@ -821,11 +830,12 @@ main {
 // SECTION WORK
 
 .startWork {
+  background-color: #f9f9f9;
   padding: 80px 0 100px;
   .flexNormal {
     display: flex;
     .boxes {
-      background-color: red;
+      box-shadow: 0 4px 44px 0 rgb(0 0 0 / 14%);
       text-align: center;
       flex-basis: 48%;
       margin: auto;
@@ -867,7 +877,7 @@ main {
         }
       }
     }
-     #startNow {
+    #startNow {
       font-size: $fontSizeBtn;
       padding: 18px 40px;
       border-radius: $radiuBtn;
@@ -899,5 +909,115 @@ main {
         @include onHoverBtn;
       }
     }
+  }
+}
+
+// SECTION PARTNERS
+
+.partners {
+  background-color: #f9f9f9;
+  padding:50px 0 200px 0;
+  .flexNormal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+// FOOTER
+
+.footer-top {
+  padding: 100px 0 100px;
+  .flexNormal {
+    display: flex;
+    justify-content: space-between;
+    .boxes {
+      flex-basis: 23%;
+      p {
+        font-family: $ubuntu;
+        font-weight: 300;
+        margin: 20px 0;
+        line-height: 1.6;
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+      ul {
+        margin-top: 30px;
+        .links {
+          line-height: 1.6;
+          a {
+            color: black;
+            &:hover {
+              color: #00d9a6;
+            }
+          }
+        }
+        .contacts {
+          margin-bottom: 30px;
+        }
+      }
+      .zoom {
+        margin: 30px 0;
+        overflow: hidden;
+        .zoomy {
+          transform: scale(2);
+        }
+        #map {
+          transition: 1s;
+        }
+      }
+    }
+  }
+}
+
+.footer-bot {
+  height: 110px;
+  width: 100%;
+  .flexBetween {
+    @include flexBetween;
+    p {
+      color: #aaaaaa;
+      font-size: 13px;
+      font-family: $ubuntu;
+    }
+    ul {
+      display: flex;
+      li {
+        color: #aaaaaa;
+        margin: 0 15px;
+      }
+    }
+  }
+}
+
+
+#scroll {
+  font-size: 18px;
+  border: 2px solid black;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px 20px;
+  border-radius: 50%;
+  padding: 7px 14px;
+  cursor: pointer;
+  z-index: 999;
+  transition: 0.4s;
+  overflow: hidden;
+  &:hover {
+    background-color: #aaaaaa;
+  }
+  &:hover p {
+    animation: downUp 0.4s linear;
+  }
+}
+
+@keyframes downUp {
+  0% {
+    transform: translateY(20px);
+  }
+  100%{
+    transform: translateY(0);
   }
 }
