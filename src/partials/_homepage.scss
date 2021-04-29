@@ -1,3 +1,6 @@
+
+
+
 // REGOLE GENERALI
 
 .container {
@@ -173,8 +176,18 @@ main {
   background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
 }
 
+// SLIDE JUMBOTRON
+.slide-left-centered-enter,
+{
+  transform: translateX(-90%);
+}
+
+.slide-left-centered-enter-active {
+    transition: all 1s ease;
+}
+
+
 .jumbotron {
-  position: relative;
   z-index: 1;
   height: 950px;
   background-size: 80%;
@@ -183,7 +196,7 @@ main {
   .text-jumbo {
     padding-top: 170px;
     width: 40%;
-    #yearsExp {
+    .yearsExp {
       letter-spacing: 8px;
       background: linear-gradient(180deg, #00d9a6 0%, #9be15d 100%);
       -webkit-background-clip: text;
@@ -226,6 +239,10 @@ main {
       }
     }
   }
+}
+
+.pollo {
+  position: relative;
   .ind-jumbo {
     position: absolute;
     bottom: 90px;
@@ -236,6 +253,7 @@ main {
     font-weight: bold;
     font-size: 20px;
     color: #aaaaaa;
+    z-index: 500;
     span {
       margin: 0 5px;
       cursor: pointer;
@@ -244,6 +262,8 @@ main {
     }
   }
 }
+
+
 
 // SECTION WEBSITE DESIGN
 
@@ -320,6 +340,7 @@ main {
     }
   }
 }
+
 
 // SECTION LEARNMORE
 
@@ -638,11 +659,11 @@ main {
         font-size: 56px;
         font-weight: 400;
       }
-      #design {
+      .design {
         font-size: 22px;
         font-family: $ubuntu;
       }
-      #dollar {
+      .dollar {
         font-size: 31px;
         vertical-align: middle;
       }
@@ -666,7 +687,7 @@ main {
 }
 
 // SECTION LISSA DURBIN
- .lissaDurbin {
+.lissaDurbin {
   text-align: center;
   background-image: url("images/four-businesspeople-in-a-boardroom-with-paperwork-PC4V8H4.jpg");
   color: white;
@@ -768,23 +789,23 @@ main {
         top: 80%;
         border-radius: 15px;
         transition: 0.5s;
-          p {
-            font-family: $ubuntu;
-            color: #aaaaaa;
-            font-size: 14px;
-            margin-bottom: 10px;
-            transition: 0.5s;
-          }
-          h3 {
-            font-size: 24px;
-            transition: 0.5s;
-          }
-          i {
-            font-size: 10px;
-            vertical-align: 40%;
-            margin-right: 10px;
-            transition: 0.5s;
-          }
+        p {
+          font-family: $ubuntu;
+          color: #aaaaaa;
+          font-size: 14px;
+          margin-bottom: 10px;
+          transition: 0.5s;
+        }
+        h3 {
+          font-size: 24px;
+          transition: 0.5s;
+        }
+        i {
+          font-size: 10px;
+          vertical-align: 40%;
+          margin-right: 10px;
+          transition: 0.5s;
+        }
       }
 
     }

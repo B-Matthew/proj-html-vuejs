@@ -196,8 +196,15 @@ main {
   background: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
 }
 
+.slide-left-centered-enter {
+  transform: translateX(-90%);
+}
+
+.slide-left-centered-enter-active {
+  transition: all 1s ease;
+}
+
 .jumbotron {
-  position: relative;
   z-index: 1;
   height: 950px;
   background-size: 80%;
@@ -208,7 +215,7 @@ main {
   padding-top: 170px;
   width: 40%;
 }
-.jumbotron .text-jumbo #yearsExp {
+.jumbotron .text-jumbo .yearsExp {
   letter-spacing: 8px;
   background: linear-gradient(180deg, #00d9a6 0%, #9be15d 100%);
   -webkit-background-clip: text;
@@ -250,7 +257,11 @@ main {
 .jumbotron .text-jumbo ul li a:hover {
   color: #00d9a6;
 }
-.jumbotron .ind-jumbo {
+
+.pollo {
+  position: relative;
+}
+.pollo .ind-jumbo {
   position: absolute;
   bottom: 90px;
   left: 40%;
@@ -260,8 +271,9 @@ main {
   font-weight: bold;
   font-size: 20px;
   color: #aaaaaa;
+  z-index: 500;
 }
-.jumbotron .ind-jumbo span {
+.pollo .ind-jumbo span {
   margin: 0 5px;
   cursor: pointer;
   padding: 10px 20px;
@@ -718,11 +730,11 @@ main {
   font-size: 56px;
   font-weight: 400;
 }
-.liveChat .flexNormal .boxLiveChat #design {
+.liveChat .flexNormal .boxLiveChat .design {
   font-size: 22px;
   font-family: "Ubuntu", sans-serif;
 }
-.liveChat .flexNormal .boxLiveChat #dollar {
+.liveChat .flexNormal .boxLiveChat .dollar {
   font-size: 31px;
   vertical-align: middle;
 }

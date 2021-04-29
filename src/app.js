@@ -9,6 +9,7 @@ function initVue() {
       clients: 0,
       zommed: false,
       test: 0,
+      scrollArrow: false,
       // ARRAY
       sectionWebsiteArr: [
         {
@@ -99,7 +100,19 @@ function initVue() {
     created: function() {
       setInterval(this.nextJumbo,5000);
     },
+
     methods: {
+      // FUNZIONE PER NASCONDERE LA FRECCIA SCROLL
+      scrollShow: function () {
+        if(window.scrollY > 500){
+          this.scrollArrow = true;
+        }else {
+          this.scrollArrow = false;
+        }
+        if (window.scrollY > 4800) {
+          setInterval(this.setTime,400);
+        }
+      },
       clickJumbo: function(elem) {
         const active = elem - 1;
         console.log(active);
@@ -113,9 +126,11 @@ function initVue() {
       mapZoom: function() {
         this.zommed = !this.zommed;
       },
+      // SCROLLPAGE
       scrollUpPage: function() {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       },
+      // INCREMENTO IND
       nextJumbo: function () {
         this.ind++
         if (this.ind >= 3) {
@@ -135,13 +150,15 @@ function initVue() {
         }
       },
     },
-
     // INCREMENTO NUMERI NELLA SEZION3 CLIENTS
     mounted: function() {
-      setInterval(this.setTime,0);
+      document.addEventListener('scroll', this.scrollShow);
     }
+
   });
 }
+
+
 
 function init() {
   initVue();

@@ -18,6 +18,7 @@ function initVue() {
       clients: 0,
       zommed: false,
       test: 0,
+      scrollArrow: false,
       // ARRAY
       sectionWebsiteArr: [{
         imgs: 'fas fa-tachometer-alt',
@@ -82,6 +83,18 @@ function initVue() {
       setInterval(this.nextJumbo, 5000);
     },
     methods: {
+      // FUNZIONE PER NASCONDERE LA FRECCIA SCROLL
+      scrollShow: function scrollShow() {
+        if (window.scrollY > 500) {
+          this.scrollArrow = true;
+        } else {
+          this.scrollArrow = false;
+        }
+
+        if (window.scrollY > 4800) {
+          setInterval(this.setTime, 400);
+        }
+      },
       clickJumbo: function clickJumbo(elem) {
         var active = elem - 1;
         console.log(active);
@@ -95,6 +108,7 @@ function initVue() {
       mapZoom: function mapZoom() {
         this.zommed = !this.zommed;
       },
+      // SCROLLPAGE
       scrollUpPage: function scrollUpPage() {
         window.scrollTo({
           top: 0,
@@ -102,6 +116,7 @@ function initVue() {
           behavior: "smooth"
         });
       },
+      // INCREMENTO IND
       nextJumbo: function nextJumbo() {
         this.ind++;
 
@@ -126,7 +141,7 @@ function initVue() {
     },
     // INCREMENTO NUMERI NELLA SEZION3 CLIENTS
     mounted: function mounted() {
-      setInterval(this.setTime, 0);
+      document.addEventListener('scroll', this.scrollShow);
     }
   });
 }

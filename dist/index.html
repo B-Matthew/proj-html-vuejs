@@ -14,6 +14,7 @@
   <body>
     <div class="vue">
       <!-- HEADER -->
+      <!-- SECTION SEARCH HIDDEN -->
       <transition name="fade">
         <div class="search" v-show ="!showSearch">
           <span id="cross" @click="searchBar()">X</span>
@@ -22,7 +23,6 @@
         </div>
       </transition>
       <header  v-show ="showSearch">
-        <!-- SECTION SEARCH HIDDEN -->
         <!-- NAV TOP -->
         <nav class="nav-top">
           <div class="container flexBetween">
@@ -54,89 +54,90 @@
           </div>
         </nav>
       </header>
-
-
       <!-- MAIN -->
       <main>
-        <section  v-show="ind == 0" class="jumbotron bg-img1">
-          <div class="container">
-            <div class="text-jumbo">
-              <div id="yearsExp">17 YEARS OF EXPERIENCE</div>
-              <h1>We Are A Web Design <span class="greenTxt">Agency</span></h1>
-              <span class="line-gradient1"></span>
-              <span class="line-gradient2"></span>
-              <p>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.
-              </p>
-              <button type="button" name="button">READ MORE</button>
-              <ul>
-                <li><a href="#">FACEBOOK</a></li>
-                <li>-</li>
-                <li><a href="#">INSTAGRAM</a></li>
-                <li>-</li>
-                <li><a href="#">YOUTUBE</a></li>
-                <li>-</li>
-                <li><a href="#">TWITTER</a></li>
-              </ul>
-            </div>
-          </div>
+        <div class="pollo">
           <div class="ind-jumbo">
             <span @click="clickJumbo(elem)" :class="(elem - 1 == ind ) ? 'backSpan' : ''" v-for="elem in 3">0{{elem}}</span>
           </div>
-        </section>
+          <transition name="slide-left-centered">
+            <section v-show="ind == 0" class="jumbotron bg-img1">
+              <div class="container">
+                <div class="text-jumbo">
+                  <div class="yearsExp">17 YEARS OF EXPERIENCE</div>
+                  <h1>We Are A Web Design <span class="greenTxt">Agency</span></h1>
+                  <span class="line-gradient1"></span>
+                  <span class="line-gradient2"></span>
+                  <p>
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.
+                  </p>
+                  <button type="button" name="button">READ MORE</button>
+                  <ul>
+                    <li><a href="#">FACEBOOK</a></li>
+                    <li>-</li>
+                    <li><a href="#">INSTAGRAM</a></li>
+                    <li>-</li>
+                    <li><a href="#">YOUTUBE</a></li>
+                    <li>-</li>
+                    <li><a href="#">TWITTER</a></li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </transition>
 
-        <section v-show="ind == 1" class="jumbotron bg-img2">
-          <div class="container">
-            <div class="text-jumbo">
-              <div id="yearsExp">17 YEARS OF EXPERIENCE</div>
-              <h1>Focus On Your <span class="greenTxt">Business</span></h1>
-              <span class="line-gradient1"></span>
-              <span class="line-gradient2"></span>
-              <p>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.
-              </p>
-              <button type="button" name="button">READ MORE</button>
-              <ul>
-                <li><a href="#">FACEBOOK</a></li>
-                <li>-</li>
-                <li><a href="#">INSTAGRAM</a></li>
-                <li>-</li>
-                <li><a href="#">YOUTUBE</a></li>
-                <li>-</li>
-                <li><a href="#">TWITTER</a></li>
-              </ul>
-            </div>
-            <div class="ind-jumbo">
-              <span @click="clickJumbo(elem)" :class="(elem - 1 == ind ) ? 'backSpan' : ''" v-for="elem in 3">0{{elem}}</span>
-            </div>
-          </div>
-        </section>
-        <section v-show="ind == 2" class="jumbotron bg-img3">
-          <div class="container">
-            <div class="text-jumbo">
-              <div id="yearsExp">17 YEARS OF EXPERIENCE</div>
-              <h1>A Group of Expert <span class="greenTxt">Planners</span></h1>
-              <span class="line-gradient1"></span>
-              <span class="line-gradient2"></span>
-              <p>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.
-              </p>
-              <button type="button" name="button">READ MORE</button>
-              <ul>
-                <li><a href="#">FACEBOOK</a></li>
-                <li>-</li>
-                <li><a href="#">INSTAGRAM</a></li>
-                <li>-</li>
-                <li><a href="#">YOUTUBE</a></li>
-                <li>-</li>
-                <li><a href="#">TWITTER</a></li>
-              </ul>
-            </div>
-            <div class="ind-jumbo">
-              <span @click="clickJumbo(elem)" :class="(elem - 1 == ind ) ? 'backSpan' : ''" v-for="elem in 3">0{{elem}}</span>
-            </div>
-          </div>
-        </section>
+          <transition name="slide-left-centered">
+            <section v-show="ind == 1" class="jumbotron bg-img2">
+              <div class="container">
+                <div class="text-jumbo">
+                  <div class="yearsExp">17 YEARS OF EXPERIENCE</div>
+                  <h1>Focus On Your <span class="greenTxt">Business</span></h1>
+                  <span class="line-gradient1"></span>
+                  <span class="line-gradient2"></span>
+                  <p>
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.
+                  </p>
+                  <button type="button" name="button">READ MORE</button>
+                  <ul>
+                    <li><a href="#">FACEBOOK</a></li>
+                    <li>-</li>
+                    <li><a href="#">INSTAGRAM</a></li>
+                    <li>-</li>
+                    <li><a href="#">YOUTUBE</a></li>
+                    <li>-</li>
+                    <li><a href="#">TWITTER</a></li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </transition>
+
+          <transition name="slide-left-centered">
+            <section v-show="ind == 2" class="jumbotron bg-img3">
+              <div class="container">
+                <div class="text-jumbo">
+                  <div class="yearsExp">17 YEARS OF EXPERIENCE</div>
+                  <h1>A Group of Expert <span class="greenTxt">Planners</span></h1>
+                  <span class="line-gradient1"></span>
+                  <span class="line-gradient2"></span>
+                  <p>
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.
+                  </p>
+                  <button type="button" name="button">READ MORE</button>
+                  <ul>
+                    <li><a href="#">FACEBOOK</a></li>
+                    <li>-</li>
+                    <li><a href="#">INSTAGRAM</a></li>
+                    <li>-</li>
+                    <li><a href="#">YOUTUBE</a></li>
+                    <li>-</li>
+                    <li><a href="#">TWITTER</a></li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </transition>
+        </div>
 
         <!-- SECTION WEBSITE DESIGN -->
         <section class="designWebsite">
@@ -159,6 +160,7 @@
             </div>
           </div>
         </section>
+
         <!-- SECTION LEARNMORE -->
         <section class="learnMore">
           <div class="container flexNormal">
@@ -179,337 +181,345 @@
             </div>
           </div>
         </section>
-        <!-- SECTION SAMPLES -->
-        <section class="samples">
-          <div class="container">
-            <div class=" flexNormal">
-              <div class="item1">
-                <span class="line-gradient1"></span>
-                <span class="line-gradient2"></span>
-                <h2>Our recent <span class="greenTxt">web designs</span> & some examples of <br> past <span class="greenTxt">projects</span></h2>
-                <span class="line-gradient1"></span>
-                <span class="line-gradient2"></span>
-              </div>
-              <div class="item2">
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind <br> texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language <br> ocean.Separated they live in Bookmarksgrove.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-              </div>
+
+
+      <!-- SECTION SAMPLES -->
+      <section class="samples">
+        <div class="container">
+          <div class=" flexNormal">
+            <div class="item1">
+              <span class="line-gradient1"></span>
+              <span class="line-gradient2"></span>
+              <h2>Our recent <span class="greenTxt">web designs</span> & some examples of <br> past <span class="greenTxt">projects</span></h2>
+              <span class="line-gradient1"></span>
+              <span class="line-gradient2"></span>
             </div>
-            <div class="rowImgs">
-              <div class="images">
-                <img class="imagesGreen" src="images/ina-soulis-227104-unsplash-1024x1024.jpg" alt="">
-                <div class="overlayGreen">
-                  <div class="textOverlay">
-                    <h3>The Basket of Flower</h3>
-                    <p>BRANDING - MARKETING</p>
-                  </div>
-                </div>
-              </div>
-              <div class="images">
-                <img class="imagesGreen" src="images/sunisa-misa-531163-unsplash-1024x1024.jpg" alt="">
-                <div class="overlayGreen">
-                  <div class="textOverlay">
-                    <h3>A Famous Ferris Wheel</h3>
-                    <p>MARKETING</p>
-                  </div>
-                </div>
-              </div>
-              <div class="images">
-                <img class="imagesGreen" src="images/355H-1024x1024.jpg" alt="">
-                <div class="overlayGreen">
-                  <div class="textOverlay">
-                    <h3>Complementary Colors</h3>
-                    <p>BRANDING - MARKETING</p>
-                  </div>
-                </div>
-              </div>
-              <div class="images">
-                <img class="imagesGreen" src="images/photo-1448932252197-d19750584e56-1024x1024.jpg" alt="">
-                <div class="overlayGreen">
-                  <div class="textOverlay">
-                    <h3>Business Prestige</h3>
-                    <p>BRANDING</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="rowImgs">
-              <div class="images">
-                <img class="imagesGreen" src="images/business-competition-PB366D8-1024x1024.jpg" alt="">
-                <div class="overlayGreen">
-                  <div class="textOverlay">
-                    <h3>Colorful Origami Boats</h3>
-                    <p>BRANDING - MARKETING</p>
-                  </div>
-                </div>
-              </div>
-              <div class="images">
-                <img class="imagesGreen" src="images/cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg" alt="">
-                <div class="overlayGreen">
-                  <div class="textOverlay">
-                    <h3>Modern Couch</h3>
-                    <p>MARKETING</p>
-                  </div>
-                </div>
-              </div>
-              <div class="images">
-                <img class="imagesGreen" src="images/aa9a4539-PQGJ7HU-1024x1024.jpg" alt="">
-                <div class="overlayGreen">
-                  <div class="textOverlay">
-                    <h3>Hot Air Balloons</h3>
-                    <p>BRANDING - MARKETING</p>
-                  </div>
-                </div>
-              </div>
-              <div class="images">
-                <img class="imagesGreen" src="images/cody-davis-253928-unsplash-1024x1024.jpg" alt="">
-                <div class="overlayGreen">
-                  <div class="textOverlay">
-                    <h3>Make Difference</h3>
-                    <p>BRANDING</p>
-                  </div>
-                </div>
-              </div>
-              <div class="phrasesAbsolute">
-                <h2>17 years of experience helping people for best solutions</h2>
-              </div>
-            </div>
-            <div class="buttonDiv ">
-              <button type="button" name="button"><span class="textBtn">READ MORE</span><span class="hoverEff"></span></button>
+            <div class="item2">
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind <br> texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language <br> ocean.Separated they live in Bookmarksgrove.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
             </div>
           </div>
-        </section>
-
-        <section class="clients">
-          <div class="container flexEnd">
-            <div class="imgAbsolute">
+          <div class="rowImgs">
+            <div class="images">
+              <img class="imagesGreen" src="images/ina-soulis-227104-unsplash-1024x1024.jpg" alt="">
               <div class="overlayGreen">
-                <div class="text">
-                  <h2>{{projects}}</h2>
-                  <h4>PROJECTS</h4>
-                  <div class="textFlex">
-                    <div class="">
-                      <h3>+{{comments}}</h3>
-                      <h4>USERS' COMMENTS</h4>
-                    </div>
-                    <div id="border-left">
-                      <h3>{{clients}}%</h3>
-                      <h4>HAPPY CLIENTS</h4>
-                    </div>
+                <div class="textOverlay">
+                  <h3>The Basket of Flower</h3>
+                  <p>BRANDING - MARKETING</p>
+                </div>
+              </div>
+            </div>
+            <div class="images">
+              <img class="imagesGreen" src="images/sunisa-misa-531163-unsplash-1024x1024.jpg" alt="">
+              <div class="overlayGreen">
+                <div class="textOverlay">
+                  <h3>A Famous Ferris Wheel</h3>
+                  <p>MARKETING</p>
+                </div>
+              </div>
+            </div>
+            <div class="images">
+              <img class="imagesGreen" src="images/355H-1024x1024.jpg" alt="">
+              <div class="overlayGreen">
+                <div class="textOverlay">
+                  <h3>Complementary Colors</h3>
+                  <p>BRANDING - MARKETING</p>
+                </div>
+              </div>
+            </div>
+            <div class="images">
+              <img class="imagesGreen" src="images/photo-1448932252197-d19750584e56-1024x1024.jpg" alt="">
+              <div class="overlayGreen">
+                <div class="textOverlay">
+                  <h3>Business Prestige</h3>
+                  <p>BRANDING</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rowImgs">
+            <div class="images">
+              <img class="imagesGreen" src="images/business-competition-PB366D8-1024x1024.jpg" alt="">
+              <div class="overlayGreen">
+                <div class="textOverlay">
+                  <h3>Colorful Origami Boats</h3>
+                  <p>BRANDING - MARKETING</p>
+                </div>
+              </div>
+            </div>
+            <div class="images">
+              <img class="imagesGreen" src="images/cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg" alt="">
+              <div class="overlayGreen">
+                <div class="textOverlay">
+                  <h3>Modern Couch</h3>
+                  <p>MARKETING</p>
+                </div>
+              </div>
+            </div>
+            <div class="images">
+              <img class="imagesGreen" src="images/aa9a4539-PQGJ7HU-1024x1024.jpg" alt="">
+              <div class="overlayGreen">
+                <div class="textOverlay">
+                  <h3>Hot Air Balloons</h3>
+                  <p>BRANDING - MARKETING</p>
+                </div>
+              </div>
+            </div>
+            <div class="images">
+              <img class="imagesGreen" src="images/cody-davis-253928-unsplash-1024x1024.jpg" alt="">
+              <div class="overlayGreen">
+                <div class="textOverlay">
+                  <h3>Make Difference</h3>
+                  <p>BRANDING</p>
+                </div>
+              </div>
+            </div>
+            <div class="phrasesAbsolute">
+              <h2>17 years of experience helping people for best solutions</h2>
+            </div>
+          </div>
+          <div class="buttonDiv ">
+            <button type="button" name="button"><span class="textBtn">READ MORE</span><span class="hoverEff"></span></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION CLIENTS -->
+      <section class="clients">
+        <div class="container flexEnd">
+          <div class="imgAbsolute">
+            <div class="overlayGreen">
+              <div class="text">
+                <h2>{{projects}}</h2>
+                <h4>PROJECTS</h4>
+                <div class="textFlex">
+                  <div class="">
+                    <h3>+{{comments}}</h3>
+                    <h4>USERS' COMMENTS</h4>
+                  </div>
+                  <div id="border-left">
+                    <h3>{{clients}}%</h3>
+                    <h4>HAPPY CLIENTS</h4>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="clientBox">
-              <h2>We <span class="greenTxt">Love</span> What <br> We Do</h2>
-              <span class="line-gradient1"></span>
-              <span class="line-gradient2"></span>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,<br> there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove. Far far away, behind <br>the word mountains. large language ocean. far from the countries Vokalia and <br> Consonantia</p>
-              <ul>
-                <li><i class="fas fa-check greenTxt"></i>far far away, behind the word mountains</li>
-                <li><i class="fas fa-check greenTxt"></i>large language ocean</li>
-                <li><i class="fas fa-check greenTxt"></i>far from the countries Vokalia and Consonantia</li>
-              </ul>
-            </div>
           </div>
-        </section>
-
-        <section class="liveChat">
-          <div class="container flexNormal">
-            <div class="boxLiveChatTitle">
-              <h2>With <span class="greenTxt">Live Chat 24/7</span> Support</h2>
-              <span class="line-gradient1"></span>
-              <span class="line-gradient2"></span>
-              <p>Far far away, behind the word mountains, far from the countriesVokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of <br>the Semantics.</p>
-            </div>
-            <div class="boxLiveChat bg-color-black ">
-              <div class="title">
-                <h2>DESIGNING</h2>
-                <p>All Designs</p>
-              </div>
-              <h3><span id="dollar">$</span>13 <span id="design">/ Design</span></h3>
-              <ul>
-                <li><i class="fas fa-check"></i>Creative Design Enabled</li>
-                <li><i class="fas fa-check"></i>Vibrant Color Usage</li>
-                <li><i class="fas fa-check"></i>Eye Catching Design</li>
-                <li><i class="fas fa-check"></i>Extreme Typography</li>
-                <li><i class="fas fa-check"></i>Exceptional Design</li>
-              </ul>
-            </div>
-            <div class="boxLiveChat bg-color-green ">
-              <div class="title">
-                <h2>DESIGNING</h2>
-                <p>All Designs</p>
-              </div>
-              <h3><span id="dollar">$</span>13 <span id="design">/ Design</span></h3>
-              <ul>
-                <li><i class="fas fa-check"></i>Creative Design Enabled</li>
-                <li><i class="fas fa-check"></i>Vibrant Color Usage</li>
-                <li><i class="fas fa-check"></i>Eye Catching Design</li>
-                <li><i class="fas fa-check"></i>Extreme Typography</li>
-                <li><i class="fas fa-check"></i>Exceptional Design</li>
-              </ul>
-            </div>
-            <div class="boxLiveChat bg-color-black ">
-              <div class="title">
-                <h2>DESIGNING</h2>
-                <p>All Designs</p>
-              </div>
-              <h3><span id="dollar">$</span>13 <span id="design">/ Design</span></h3>
-              <ul>
-                <li><i class="fas fa-check"></i>Creative Design Enabled</li>
-                <li><i class="fas fa-check"></i>Vibrant Color Usage</li>
-                <li><i class="fas fa-check"></i>Eye Catching Design</li>
-                <li><i class="fas fa-check"></i>Extreme Typography</li>
-                <li><i class="fas fa-check"></i>Exceptional Design</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section class="lissaDurbin">
-          <div class="overlayBlack">
-          </div>
-          <div class="container">
-            <div class="textLissa">
-              <i class="fas fa-quote-left greenTxt"></i>
-              <p>When it comes to barbequing, there are two main schools of thought for the techniques that you can use. Freshly scrambled eggs with applewood smoked bacon - are amazing!</p>
-              <img src="images\businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
-              <div class="greenTxt lissa">LISSA DURBIN</div>
-              <div style="font-size: 18px">Client</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="news">
-          <div class="container">
-            <div class="title">
-              <h2>Latest News & Our <span class="greenTxt">Blog</span></h2>
-              <span class="line-gradient1"></span>
-              <span class="line-gradient2"></span>
-            </div>
-            <div class="boxesNews">
-              <div class="boxNews">
-                <img src="images/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg" alt="">
-                <div class="absoluteBox">
-                  <p>May 24, 2018 by Alex</p>
-                  <h3><i class="fas fa-circle greenTxt"></i>Marketing Ideas</h3>
-                </div>
-              </div>
-              <div class="boxNews">
-                <img src="images/Businessman-at-the-desk-in-his-office-resting--1024x768.jpg" alt="">
-                <div class="absoluteBox">
-                  <p>May 24, 2018 by Alex</p>
-                  <h3><i class="fas fa-circle greenTxt"></i>Rest During Working Hours</h3>
-                </div>
-              </div>
-              <div class="boxNews">
-                <img src="images/simple-home-office-with-tree-PBXRXYB-large-1024x768.jpg" alt="">
-                <div class="absoluteBox">
-                  <p>May 24, 2018 by Alex</p>
-                  <h3><i class="fas fa-circle greenTxt"></i>Develop Your Startup Idea</h3>
-                </div>
-              </div>
-              <div class="phrasesAbsolute">
-                <h2>17 years of experience helping people for best solutions</h2>
-              </div>
-            </div>
-            <div class="btn">
-              <button type="button" name="button"><span class="textBtn">VIEW ALL POST</span><span class="hoverEff"></span></button>
-            </div>
-          </div>
-        </section>
-
-        <section class="startWork">
-          <div class="container flexNormal">
-            <div class="boxes bg-color-black">
-              <h3>Are You Ready?</h3>
-              <h2>Start a New Project</h2>
-              <div class="inputLayout">
-                <input id="textInput" type="text" name="" value="" placeholder="Enter Your Email Address">
-                <button id="textSubmit" type="button" name="button">SUBMIT</button>
-              </div>
-            </div>
-            <div class="boxes bg-color-green">
-              <h3>What Are You Waiting for?</h3>
-              <h2>Let's Talk About Work</h2>
-              <button id="startNow" type="button" name="button"><span class="textBtn">START NOW</span><span class="hoverEff"></span></button>
-            </div>
-          </div>
-        </section>
-
-        <section class="partners">
-          <div class="container flexNormal">
-            <div>
-              <img src="images/client-1-2x.png" alt="">
-            </div>
-            <div>
-              <img src="images/client-9-2x.png" alt="">
-            </div>
-            <div>
-              <img src="images/client-7-2x.png" alt="">
-            </div>
-            <div>
-              <img src="images/client-3-2x.png" alt="">
-            </div>
-            <div>
-              <img src="images/client-4-2x.png" alt="">
-            </div>
-            <div>
-              <img src="images/client-5-2x.png" alt="">
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <!-- FOOTER -->
-      <footer>
-        <section class="footer-top">
-          <div class="container flexNormal">
-            <div class="boxes">
-              <img src="images/cropped-Group-39-2x.png" alt="">
-              <p>While the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees.While the lovely valley teems with vapour around me.</p>
-            </div>
-            <div class="boxes">
-              <h2>QUICk LINKS</h2>
-              <span class="line-gradient1"></span>
-              <span class="line-gradient2"></span>
-              <ul>
-                <li class="links" v-for="link in linksArr"><a href="#">{{link.link}}</a></li>
-              </ul>
-            </div>
-            <div class="boxes">
-              <h2>CONTACT</h2>
-              <span class="line-gradient1"></span>
-              <span class="line-gradient2"></span>
-              <ul>
-                <li class="contacts" v-for="contact in contactArr">{{contact.info}}</li>
-              </ul>
-            </div>
-            <div class="boxes">
-              <h2>LOCATION ON MAP</h2>
-              <span class="line-gradient1"></span>
-              <span class="line-gradient2"></span>
-              <div @click="mapZoom" class="zoom">
-                <img :class="zommed ? 'zoomy' : ''" id="map" src="images/map.png" alt="">
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="footer-bot bg-color-black">
-          <div class="container flexBetween">
-            <div class="">
-              <p>© 2021 PHLOX BUSINESS THEME.</p>
-            </div>
+          <div class="clientBox">
+            <h2>We <span class="greenTxt">Love</span> What <br> We Do</h2>
+            <span class="line-gradient1"></span>
+            <span class="line-gradient2"></span>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,<br> there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove. Far far away, behind <br>the word mountains. large language ocean. far from the countries Vokalia and <br> Consonantia</p>
             <ul>
-              <li v-for="icon in iconArr"><i :class="icon.icon"></i></li>
+              <li><i class="fas fa-check greenTxt"></i>far far away, behind the word mountains</li>
+              <li><i class="fas fa-check greenTxt"></i>large language ocean</li>
+              <li><i class="fas fa-check greenTxt"></i>far from the countries Vokalia and Consonantia</li>
             </ul>
           </div>
-        </section>
-        <div @click="scrollUpPage()" id="scroll">
-          <p>&#8593;</p>
         </div>
-      </footer>
-    </div>
-  </body>
-  </html>
+      </section>
+
+      <!-- SECTIONE LIVE CHAT -->
+      <section class="liveChat">
+        <div class="container flexNormal">
+          <div class="boxLiveChatTitle">
+            <h2>With <span class="greenTxt">Live Chat 24/7</span> Support</h2>
+            <span class="line-gradient1"></span>
+            <span class="line-gradient2"></span>
+            <p>Far far away, behind the word mountains, far from the countriesVokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of <br>the Semantics.</p>
+          </div>
+          <div class="boxLiveChat bg-color-black ">
+            <div class="title">
+              <h2>DESIGNING</h2>
+              <p>All Designs</p>
+            </div>
+            <h3><span class="dollar">$</span>13 <span class="design">/ Design</span></h3>
+            <ul>
+              <li><i class="fas fa-check"></i>Creative Design Enabled</li>
+              <li><i class="fas fa-check"></i>Vibrant Color Usage</li>
+              <li><i class="fas fa-check"></i>Eye Catching Design</li>
+              <li><i class="fas fa-check"></i>Extreme Typography</li>
+              <li><i class="fas fa-check"></i>Exceptional Design</li>
+            </ul>
+          </div>
+          <div class="boxLiveChat bg-color-green ">
+            <div class="title">
+              <h2>DESIGNING</h2>
+              <p>All Designs</p>
+            </div>
+            <h3><span class="dollar">$</span>13 <span class="design">/ Design</span></h3>
+            <ul>
+              <li><i class="fas fa-check"></i>Creative Design Enabled</li>
+              <li><i class="fas fa-check"></i>Vibrant Color Usage</li>
+              <li><i class="fas fa-check"></i>Eye Catching Design</li>
+              <li><i class="fas fa-check"></i>Extreme Typography</li>
+              <li><i class="fas fa-check"></i>Exceptional Design</li>
+            </ul>
+          </div>
+          <div class="boxLiveChat bg-color-black ">
+            <div class="title">
+              <h2>DESIGNING</h2>
+              <p>All Designs</p>
+            </div>
+            <h3><span class="dollar">$</span>13 <span class="design">/ Design</span></h3>
+            <ul>
+              <li><i class="fas fa-check"></i>Creative Design Enabled</li>
+              <li><i class="fas fa-check"></i>Vibrant Color Usage</li>
+              <li><i class="fas fa-check"></i>Eye Catching Design</li>
+              <li><i class="fas fa-check"></i>Extreme Typography</li>
+              <li><i class="fas fa-check"></i>Exceptional Design</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTIONA LISSA DURBIN -->
+      <section class="lissaDurbin">
+        <div class="overlayBlack">
+        </div>
+        <div class="container">
+          <div class="textLissa">
+            <i class="fas fa-quote-left greenTxt"></i>
+            <p>When it comes to barbequing, there are two main schools of thought for the techniques that you can use. Freshly scrambled eggs with applewood smoked bacon - are amazing!</p>
+            <img src="images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+            <div class="greenTxt lissa">LISSA DURBIN</div>
+            <div style="font-size: 18px">Client</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION NEWS -->
+      <section class="news">
+        <div class="container">
+          <div class="title">
+            <h2>Latest News & Our <span class="greenTxt">Blog</span></h2>
+            <span class="line-gradient1"></span>
+            <span class="line-gradient2"></span>
+          </div>
+          <div class="boxesNews">
+            <div class="boxNews">
+              <img src="images/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg" alt="">
+              <div class="absoluteBox">
+                <p>May 24, 2018 by Alex</p>
+                <h3><i class="fas fa-circle greenTxt"></i>Marketing Ideas</h3>
+              </div>
+            </div>
+            <div class="boxNews">
+              <img src="images/Businessman-at-the-desk-in-his-office-resting--1024x768.jpg" alt="">
+              <div class="absoluteBox">
+                <p>May 24, 2018 by Alex</p>
+                <h3><i class="fas fa-circle greenTxt"></i>Rest During Working Hours</h3>
+              </div>
+            </div>
+            <div class="boxNews">
+              <img src="images/simple-home-office-with-tree-PBXRXYB-large-1024x768.jpg" alt="">
+              <div class="absoluteBox">
+                <p>May 24, 2018 by Alex</p>
+                <h3><i class="fas fa-circle greenTxt"></i>Develop Your Startup Idea</h3>
+              </div>
+            </div>
+            <div class="phrasesAbsolute">
+              <h2>17 years of experience helping people for best solutions</h2>
+            </div>
+          </div>
+          <div class="btn">
+            <button type="button" name="button"><span class="textBtn">VIEW ALL POST</span><span class="hoverEff"></span></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION STARTWORK -->
+      <section class="startWork">
+        <div class="container flexNormal">
+          <div class="boxes bg-color-black">
+            <h3>Are You Ready?</h3>
+            <h2>Start a New Project</h2>
+            <div class="inputLayout">
+              <input id="textInput" type="text" name="mail" value="" placeholder="Enter Your Email Address">
+              <button id="textSubmit" type="button" name="button">SUBMIT</button>
+            </div>
+          </div>
+          <div class="boxes bg-color-green">
+            <h3>What Are You Waiting for?</h3>
+            <h2>Let's Talk About Work</h2>
+            <button id="startNow" type="button" name="button"><span class="textBtn">START NOW</span><span class="hoverEff"></span></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION PARTNERS -->
+      <section class="partners">
+        <div class="container flexNormal">
+          <div>
+            <img src="images/client-1-2x.png" alt="">
+          </div>
+          <div>
+            <img src="images/client-9-2x.png" alt="">
+          </div>
+          <div>
+            <img src="images/client-7-2x.png" alt="">
+          </div>
+          <div>
+            <img src="images/client-3-2x.png" alt="">
+          </div>
+          <div>
+            <img src="images/client-4-2x.png" alt="">
+          </div>
+          <div>
+            <img src="images/client-5-2x.png" alt="">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <section class="footer-top">
+        <div class="container flexNormal">
+          <div class="boxes">
+            <img src="images/cropped-Group-39-2x.png" alt="">
+            <p>While the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees.While the lovely valley teems with vapour around me.</p>
+          </div>
+          <div class="boxes">
+            <h2>QUICk LINKS</h2>
+            <span class="line-gradient1"></span>
+            <span class="line-gradient2"></span>
+            <ul>
+              <li class="links" v-for="link in linksArr"><a href="#">{{link.link}}</a></li>
+            </ul>
+          </div>
+          <div class="boxes">
+            <h2>CONTACT</h2>
+            <span class="line-gradient1"></span>
+            <span class="line-gradient2"></span>
+            <ul>
+              <li class="contacts" v-for="contact in contactArr">{{contact.info}}</li>
+            </ul>
+          </div>
+          <div class="boxes">
+            <h2>LOCATION ON MAP</h2>
+            <span class="line-gradient1"></span>
+            <span class="line-gradient2"></span>
+            <div @click="mapZoom" class="zoom">
+              <img :class="zommed ? 'zoomy' : ''" id="map" src="images/map.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-bot bg-color-black">
+        <div class="container flexBetween">
+          <div class="">
+            <p>&copy; 2021 PHLOX BUSINESS THEME.</p>
+          </div>
+          <ul>
+            <li v-for="icon in iconArr"><i :class="icon.icon"></i></li>
+          </ul>
+        </div>
+      </section>
+      <div v-if="scrollArrow == true" @click="scrollUpPage()" id="scroll">
+        <p>&#8593;</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
